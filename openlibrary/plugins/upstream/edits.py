@@ -26,8 +26,8 @@ class community_edits_queue(delegate.page):
                 submitter=username,
                 comment=i.comment
             )
-            return delegate.RawText(json.dumps(result), content_type="application/json")        
-    
+            return delegate.RawText(json.dumps(result), content_type="application/json")
+
     def GET(self):
         i = web.input(page=1)
         user = web.ctx.site.get_user()
